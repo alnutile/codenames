@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Codenames;
+use App\Http\Livewire\ShowCodename;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Codenames::class);
