@@ -5,11 +5,11 @@
         </div>
         <div class="mdl-card__supporting-text">
             Just click the button below to generate a new codename
-            <p>{{ $random }}</p>
+            <p>{{ $codename }}</p>
         </div>
         <div class="mdl-card__actions mdl-card--border">
             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Get Started
+                Generate
             </a>
         </div>
     </div>
