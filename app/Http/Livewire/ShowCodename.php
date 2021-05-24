@@ -19,7 +19,17 @@ class ShowCodename extends Component
 
     public function render()
     {
-        $this->codename = Arr::random($this->codenames);
+        $this->codename = $this->getCodeName();
         return view('livewire.show-codename');
+    }
+
+    public function getCodeName()
+    {
+        $codename = Arr::random($this->codenames);
+        if ($codename != $this->codename && !empty($codename)) {
+            return $codename;
+        } else {
+            $this->getCodeName();
+        }
     }
 }

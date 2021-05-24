@@ -8,8 +8,8 @@
             <p>{{ $codename }}</p>
         </div>
         <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Generate
+            <a wire:click="getCodeName" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Generate Another
             </a>
         </div>
     </div>
