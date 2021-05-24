@@ -10,26 +10,16 @@
     <link href="/css/app.css" rel="stylesheet">
 </head>
 
-<body class="mdc-typography">
+<body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         @include("nav")
         <main class="mdl-layout__content">
-            <div class="page-content">
-                <div class="mdl-grid">
-                    <div class="mdl-cell mdl-cell--2-col">
-                        @yield('content')
-                    </div>
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col"></div>
+                <div class="mdl-cell mdl-cell--8-col">
+                    @yield('content')
                 </div>
-                <div class="mdl-grid">
-                    <div class="mdl-cell mdl-cell--8-col">
-                        @yield('content')
-                    </div>
-                </div>
-                <div class="mdl-grid">
-                    <div class="mdl-cell mdl-cell--2-col">
-                        @yield('content')
-                    </div>
-                </div>
+                <div class="mdl-cell mdl-cell--2-col"></div>
             </div>
         </main>
     </div>

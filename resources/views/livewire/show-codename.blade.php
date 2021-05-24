@@ -1,5 +1,5 @@
 <div>
-    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="codename-card-wide mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Welcome</h2>
         </div>
