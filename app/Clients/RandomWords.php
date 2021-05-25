@@ -13,6 +13,25 @@ class RandomWords
 
     protected $base_url = "https://random-data-api.com/api";
     protected $client = null;
+    protected $used = [];
+    protected $groupings = [
+        [
+            "uri" => "/color/random_color",
+            "key" => "color_name"
+        ],
+        [
+            "uri" => "/beer/random_beer",
+            "key" => "hop"
+        ],
+        [
+            "uri" => "/food/random_food",
+            "key" => "ingredient"
+        ],
+        [
+            "uri" => "/hipster/random_hipster_stuff",
+            "key" => "word"
+        ]
+    ];
 
 
     public function get()
