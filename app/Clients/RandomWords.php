@@ -31,6 +31,10 @@ class RandomWords
         [
             "uri" => "/hipster/random_hipster_stuff",
             "key" => "word"
+        ],
+        [
+            "uri" => "/dessert/random_dessert",
+            "key" => "variety"
         ]
     ];
 
