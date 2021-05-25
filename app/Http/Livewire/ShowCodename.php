@@ -25,7 +25,7 @@ class ShowCodename extends Component
 
     public function getCodeName()
     {
-        $start = Str::random(20);
+        $start = FakeComposer::class;
         $end = Str::random(20);
         return sprintf("%s-%s", $start, $end);;
     }
