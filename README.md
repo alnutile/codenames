@@ -29,6 +29,6 @@ https://getmdl.io/customize/index.html
 
 ## XDebug
 
-Very important! :) https://medium.com/geekculture/debug-your-laravel-sail-applications-with-xdebug-160ad70fcd41
-
-Note the port is 9003
+This got me far https://blog.levacic.net/2020/12/19/xdebug-3-docker-vs-code-setup-guide-on-ubuntu/
+But I still need to be logged in and running `php artisan test path/to/test.php`
+To make the Launch Xdebug actually work.
