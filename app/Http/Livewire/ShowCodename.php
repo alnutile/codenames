@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 use Livewire\Component;
 
 class ShowCodename extends Component
@@ -25,11 +25,8 @@ class ShowCodename extends Component
 
     public function getCodeName()
     {
-        $codename = Arr::random($this->codenames);
-        if ($codename != $this->codename && !empty($codename)) {
-            return $codename;
-        } else {
-            $this->getCodeName();
-        }
+        $start = Str::random(20);
+        $end = Str::random(20);
+        return sprintf("%s-%s", $start, $end);;
     }
 }

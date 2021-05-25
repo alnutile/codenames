@@ -26,3 +26,9 @@ https://laravel-livewire.com/docs/2.x/testing
 https://getmdl.io/started/index.html#download
 
 https://getmdl.io/customize/index.html
+
+## XDebug
+
+Very important! :) https://medium.com/geekculture/debug-your-laravel-sail-applications-with-xdebug-160ad70fcd41
+
+Note the port is 9003

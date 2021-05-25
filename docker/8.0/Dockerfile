@@ -10,6 +10,8 @@ WORKDIR /var/www/html
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=UTC
 
+## 5-24 07:19
+
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update \
@@ -30,9 +32,7 @@ RUN apt-get update \
     php8.0-msgpack php8.0-igbinary php8.0-ldap \
     php8.0-redis
 
-RUN if [ ${XDEBUG}] ; then \
-    apt-get install -y php-xdebug; \
-    fi;
+RUN pecl install xdebug
 
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
     && curl -sL https://deb.nodesource.com/setup_15.x | bash - \

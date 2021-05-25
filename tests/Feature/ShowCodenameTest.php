@@ -17,6 +17,8 @@ class ShowCodenameTest extends TestCase
 
     public function testClickButton()
     {
-        Livewire::test(ShowCodename::class)->call("getCodeName")->assertSee("foo");
+        Livewire::test(ShowCodename::class)
+            ->call("getCodeName")
+            ->assertDontSee("<p></p>\n");
     }
 }
