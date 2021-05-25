@@ -2,6 +2,7 @@
 
 namespace App\Clients;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 
@@ -36,13 +37,18 @@ class RandomWords
 
     public function get()
     {
-        $word_1 = $this->request("/color/random_color");
-        $word_1 = $this->returnFirstWord($word_1->json()['color_name']);
+        $words = [];
+        $groups = Arr::random($this->groupings, 2);
+        foreach ($groups as $group) {
+            $word = $this->request($group['uri']);
+            array_push($words, $this->returnFirstWord($word->json()[$group['key']]));
+        }
+        return Str::lower(sprintf("%s-%s", $words[0], $words[1]));
+    }
 
-        $word_2 = $this->request("/beer/random_beer");
-        $word_2 = $this->returnFirstWord($word_2->json()['hop']);
-
-        return Str::lower(sprintf("%s-%s", $word_1, $word_2));
+    public function setGroupings(array $items)
+    {
+        $this->groupings = $items;
     }
 
     protected function request($uri)
