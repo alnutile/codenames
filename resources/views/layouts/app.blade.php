@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <title>Laravel</title>
     <livewire:styles />
+    <link href="/css/vendor.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
+
+
 </head>
 
 <body>

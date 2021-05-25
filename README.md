@@ -32,3 +32,9 @@ https://getmdl.io/customize/index.html
 This got me far https://blog.levacic.net/2020/12/19/xdebug-3-docker-vs-code-setup-guide-on-ubuntu/
 But I still need to be logged in and running `php artisan test path/to/test.php`
 To make the Launch Xdebug actually work.
+
+## TODO
+
+-   Footer Area
+-   Dark Theme
+-   Card for API How to use

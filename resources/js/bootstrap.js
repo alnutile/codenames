@@ -1,5 +1,6 @@
 //window._ = require('lodash');
-
+import hljs from 'highlight.js';
+window.hljs = hljs;
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
