@@ -5,12 +5,12 @@
         </div>
         <div class="mdl-card__supporting-text">
             Just click the button below to generate a new codename
-            <p>{{ $codename }}</p>
+            <h3>{{ $codename }}</h3>
         </div>
         <div class="mdl-card__actions mdl-card--border">
-            <a wire:click="getCodeName" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Generate Another
-            </a>
+            <button wire:click="getCodeName" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" wire:loading.attr="disabled" style="min-width: 167.875px;">
+                <span>Generate Another</span>
+            </button>
         </div>
     </div>
 </div>
