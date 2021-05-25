@@ -16,7 +16,7 @@
         <pre>
             <code class="json">
                 {
-                "codename": "foo-bar"
+                  "codename": "foo-bar"
                 }
             </code>
         </pre>
