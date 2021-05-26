@@ -20,3 +20,8 @@ jobs:
         with:
           dev: yes
           args: --no-interaction --prefer-dist --optimize-autoloader
+
+      # Run linting to make sure it is worthwhile before NPM
+      - name: phpstan
+        run: |
+          ./vendor/bin/phpstan analyse
