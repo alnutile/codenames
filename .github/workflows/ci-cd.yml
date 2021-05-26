@@ -16,7 +16,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
       # Run install
-      - uses: php-actions/composer@v5with:
+      - uses: php-actions/composer@v5
         with:
           dev: yes
           args: --no-interaction --prefer-dist --optimize-autoloader
