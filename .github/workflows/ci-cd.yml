@@ -25,3 +25,10 @@ jobs:
       - name: phpstan
         run: |
           ./vendor/bin/phpstan analyse
+
+      # Again another lint before we do the js build
+      - name: PHP Code Style (phpcs)
+        uses: chindit/actions-phpcs@master
+        with:
+          # Folder to check code style
+          dir: app/
