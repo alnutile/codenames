@@ -38,3 +38,17 @@ To make the Launch Xdebug actually work.
 -   Footer Area
 -   Dark Theme
 -   Card for API How to use
+
+## CI
+
+Run PHP Unit
+Run lara Stan
+
+## CD
+
+Take the artifact and put it back into the repo WITHOUT forcing another build
+
+Then have the server unpack that and put the .env stuff in there when done
+
+For this one I can use the artifact action to pass the build after it passes to the step to
+send it over using a deployer / migrate action or envoy
