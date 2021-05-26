@@ -3,10 +3,19 @@ name: CI-CD
 on: [push]
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      # Speeds up the builds
+      - name: Cache Composer dependencies
+        uses: actions/cache@v2
+        with:
+          path: /tmp/composer-cache
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+
+      # Run install
       - uses: php-actions/composer@v5with:
         with:
           dev: yes

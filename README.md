@@ -52,3 +52,22 @@ Then have the server unpack that and put the .env stuff in there when done
 
 For this one I can use the artifact action to pass the build after it passes to the step to
 send it over using a deployer / migrate action or envoy
+
+## NOTES
+
+Forge has this
+
+```
+cd /home/forge/codenames.alfrednutile.info
+git pull origin main
+$FORGE_COMPOSER install --no-interaction --prefer-dist --optimize-autoloader
+npm install
+npm run prod
+
+( flock -w 10 9 || exit 1
+    echo 'Restarting FPM...'; sudo -S service $FORGE_PHP_FPM reload ) 9>/tmp/fpmlock
+
+if [ -f artisan ]; then
+    $FORGE_PHP artisan migrate --force
+fi
+```
