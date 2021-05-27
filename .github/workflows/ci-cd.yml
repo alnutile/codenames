@@ -30,10 +30,18 @@ jobs:
       - name: PHP Code Style (phpcs)
         uses: chindit/actions-phpcs@master
         with:
-          # Folder to check code style
           cli: "--standard=PSR12"
           dir: app/
 
-      # PHPUnit
       - name: PHPUnit
         uses: nathanheffley/laravel-phpunit-action@master
+
+      - name: MariaDB
+        uses: shogo82148/actions-setup-mysql@v1
+        with:
+          mysql-version: "8.0"
+
+      - name: Migrations
+        run: |
+          cp .env.github .env
+          php artisan migrate
