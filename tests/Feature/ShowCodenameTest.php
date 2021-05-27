@@ -14,8 +14,9 @@ class ShowCodenameTest extends TestCase
 {
     public function testRandomName()
     {
-        Http::shouldReceive('get->json')->twice()
-            ->andReturn(['color_name' => "foo baz"], ['hop' => "bar boo foo"]);
+        // Http::shouldReceive('get->json')->twice()
+        //     ->andReturn(['color_name' => "foo baz"], ['hop' => "bar boo foo"]);
+
         Livewire::test(ShowCodename::class)->assertSee("foo-bar");
     }
 

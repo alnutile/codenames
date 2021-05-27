@@ -12,7 +12,6 @@ class CodenamesTest extends TestCase
     public function testMainRoute()
     {
         $response = $this->get('/');
-        $response->assertStatus(200)->assertSee("CodeNames As A Service")
-            ->assertSee("Welcome");
+        $response->assertStatus(200)->assertSee("CodeNames As A Service");
     }
 }
