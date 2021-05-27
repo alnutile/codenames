@@ -33,3 +33,7 @@ jobs:
           # Folder to check code style
           cli: "--standard=PSR12"
           dir: app/
+
+      # PHPUnit
+      - name: PHPUnit
+        uses: nathanheffley/laravel-phpunit-action@master

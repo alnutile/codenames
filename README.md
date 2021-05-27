@@ -41,8 +41,26 @@ To make the Launch Xdebug actually work.
 
 ## CI
 
-Run PHP Unit
-Run lara Stan
+### PHPStan
+
+Static Code Checking
+
+### PHPCs
+
+Code Linting
+
+### NPM (now the longer running items)
+
+Some of our Livewire or VueJS may depend on these
+
+### PHPUNit
+
+Run our Unit tests
+
+## CD
+
+If the above passed then bundle the artifact
+minus the .env file for deployment in this step
 
 ## CD
 
