@@ -31,4 +31,5 @@ jobs:
         uses: chindit/actions-phpcs@master
         with:
           # Folder to check code style
+          cli: "--standard=PSR12"
           dir: app/

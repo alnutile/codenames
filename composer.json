@@ -20,7 +20,8 @@
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
         "nunomaduro/larastan": "^0.7.6",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.3.3",
+        "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
         "psr-4": {
@@ -44,7 +45,8 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "fix": "vendor/bin/phpcbf --standard=PSR12 app"
     },
     "extra": {
         "laravel": {
