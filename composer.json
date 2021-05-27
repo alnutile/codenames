@@ -47,7 +47,8 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "fix": "vendor/bin/phpcbf --standard=PSR12 app"
+        "fix": "vendor/bin/phpcbf --standard=PSR12 app",
+        "stan": "vendor/bin/phpstan analyse"
     },
     "extra": {
         "laravel": {

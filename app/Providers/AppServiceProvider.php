@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
+use App\Clients\CodenameGeneratorInterface;
 use App\Clients\GenericGenerator;
 use App\Clients\Haikunator;
-use App\Clients\RandomWords;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
