@@ -57,12 +57,14 @@ Some of our Livewire or VueJS may depend on these
 
 Run our Unit tests
 
+### Test Coverage Check
+
+After the above we should access this as well
+
 ## CD
 
 If the above passed then bundle the artifact
 minus the .env file for deployment in this step
-
-## CD
 
 Take the artifact and put it back into the repo WITHOUT forcing another build
 
