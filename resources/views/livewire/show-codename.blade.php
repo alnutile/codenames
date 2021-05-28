@@ -12,7 +12,7 @@
                 and the library <a target="_blank" href="https://github.com/Atrox/haikunatorphp">https://github.com/Atrox/haikunatorphp</a>
             </p>
         </div>
-        <div class="mdl-card__actions mdl-card--border">
+        <div class="mdl-card__actions mdl-card--border" wire:click="getCodeName">
             <button wire:click="getCodeName" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" wire:loading.attr="disabled" style="min-width: 167.875px;">
                 <span>Generate Another</span>
             </button>
