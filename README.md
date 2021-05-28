@@ -1,5 +1,7 @@
 # CodeNames
 
+[![CI-CD](https://github.com/alnutile/codenames/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/alnutile/codenames/actions/workflows/ci-cd.yml)
+
 This will be a simple site it will produce heroku like codenames for you to use on projects.
 
 It will have an api as well (see notes below)
