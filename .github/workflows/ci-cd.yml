@@ -81,5 +81,7 @@ jobs:
         run: |
           sudo cp .env.github .env
 
-      - name: PHPUnit
-        uses: nathanheffley/laravel-phpunit-action@master
+      - name: Test with phpunit
+        run: vendor/bin/phpunit --coverage-text
+        env:
+          DB_PORT: ${{ job.services.mysql.ports['3306'] }}
