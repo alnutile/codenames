@@ -33,15 +33,15 @@ jobs:
           cli: "--standard=PSR12"
           dir: app/
 
-      - name: PHPUnit
-        uses: nathanheffley/laravel-phpunit-action@master
-
       - name: MariaDB
         uses: shogo82148/actions-setup-mysql@v1
         with:
           mysql-version: "8.0"
 
+      # The tests take care of the migrations we just want the .env file in place
       - name: Migrations
         run: |
-          cp .env.github .env
-          php artisan migrate
+          sudo cp .env.github .env
+
+      - name: PHPUnit
+        uses: nathanheffley/laravel-phpunit-action@master
