@@ -4,6 +4,8 @@ This will be a simple site it will produce heroku like codenames for you to use 
 
 It will have an api as well (see notes below)
 
+![](logo.png)
+
 ## API
 
 `GET /api/codenames`
