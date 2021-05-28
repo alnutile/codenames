@@ -60,7 +60,7 @@ Run our Unit tests
 
 After the above we should access this as well
 
-## CD
+## CD (coming soon)
 
 If the above passed then bundle the artifact
 minus the .env file for deployment in this step
@@ -74,7 +74,7 @@ send it over using a deployer / migrate action or envoy
 
 ## NOTES
 
-Forge has this
+Forge has this that I want to consider for later:
 
 ```
 cd /home/forge/codenames.alfrednutile.info
