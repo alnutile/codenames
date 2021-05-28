@@ -72,6 +72,10 @@ Then have the server unpack that and put the .env stuff in there when done
 For this one I can use the artifact action to pass the build after it passes to the step to
 send it over using a deployer / migrate action or envoy
 
+## TODO
+
+Add Zap scanning as well
+
 ## NOTES
 
 Forge has this that I want to consider for later:

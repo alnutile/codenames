@@ -4,7 +4,7 @@ namespace App\Clients;
 
 use Atrox\Haikunator as HaikunatorLibrary;
 
-class Haikunator
+class Haikunator implements CodenameGeneratorInterface
 {
 
     public function get()

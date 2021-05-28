@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(CodenameGeneratorInterface::class, function () {
-            return new GenericGenerator();
+            return new Haikunator();
         });
 
         $this->app->bind("generator", function () {
