@@ -7,7 +7,7 @@
             Just click the button below to generate a new codename
             <h3>{{ $codename }}</h3>
             <p class="typography-styles-body2">
-                manu thanks to <a target="_blank" href="https://random-data-api.com/documentation">https://random-data-api.com/documentation</a>
+                many thanks to <a target="_blank" href="https://random-data-api.com/documentation">https://random-data-api.com/documentation</a>
                 <br>
                 and the library <a target="_blank" href="https://github.com/Atrox/haikunatorphp">https://github.com/Atrox/haikunatorphp</a>
             </p>

@@ -17,6 +17,6 @@ class CodenamesApiControllerTest extends TestCase
     {
         $response = $this->json("GET", '/api/codenames');
 
-        $response->assertStatus(200);
+        $response->assertStatus(200)->assertJsonStructure(['data']);
     }
 }

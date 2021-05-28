@@ -14,12 +14,15 @@
         <p>All you need to do is make a GET request <b>https://codenames.alfrednutile.info/api/codenames</b></p>
         <p>Return JSON will be:</p>
         <pre>
-            <code class="json">
-                {
-                  "codename": "foo-bar"
-                }
-            </code>
+        <code class="json">
+        {
+            "codename": "foo-bar"
+        }
+        </code>
         </pre>
+        <p class="typography-styles-body2">
+            see it in action! <a target="_blank" href="/api/codenames">/api/codenames</a>
+        </p>
     </div>
 </div>
 @endsection

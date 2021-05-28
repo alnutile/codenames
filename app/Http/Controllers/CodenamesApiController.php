@@ -9,6 +9,10 @@ class CodenamesApiController extends Controller
 {
     public function __invoke(CodenameGeneratorInterface $codenames)
     {
-        return response()->json($codenames->get());
+        return response()->json(
+            [
+                "data" => $codenames->get()
+            ]
+        );
     }
 }
