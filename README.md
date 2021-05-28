@@ -8,6 +8,8 @@ It will have an api as well (see notes below)
 
 ![](logo.png)
 
+**Check it out [here](https://codenames.alfrednutile.info)**
+
 ## API
 
 `GET /api/codenames`
