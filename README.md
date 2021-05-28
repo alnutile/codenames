@@ -1,7 +1,6 @@
 # CodeNames
 
-This will be a simple site
-it will product code names for you to use on projects.
+This will be a simple site it will produce heroku like codenames for you to use on projects.
 
 It will have an api as well (see notes below)
 
