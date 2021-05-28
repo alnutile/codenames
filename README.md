@@ -18,7 +18,7 @@ Returns: 201
 
 ```json
 {
-    "codename": "foo-baz"
+    "data": "foo-baz"
 }
 ```
 
