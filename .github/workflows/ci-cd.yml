@@ -2,13 +2,36 @@ name: CI-CD
 
 on: [push]
 
+# Thanks to https://github.com/shivammathur/setup-php/blob/master/examples/laravel-mysql.yml
 jobs:
   ci:
     runs-on: ubuntu-latest
+    env:
+      DB_DATABASE: test
+      DB_USERNAME: root
+      DB_PASSWORD: password
+      BROADCAST_DRIVER: log
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: false
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: test
+        ports:
+          - 3306/tcp
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
       - uses: actions/checkout@v2
 
-      # Speeds up the builds
+      # Setup some PHP drivers
+      - name: Setup PHP with PECL extension
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.4"
+          extensions: imagick, swoole
+
+          # Speeds up the builds
       - name: Cache Composer dependencies
         uses: actions/cache@v2
         with:
@@ -32,11 +55,6 @@ jobs:
         with:
           cli: "--standard=PSR12"
           dir: app/
-
-      - name: MariaDB
-        uses: shogo82148/actions-setup-mysql@v1
-        with:
-          mysql-version: "8.0"
 
       # The tests take care of the migrations we just want the .env file in place
       - name: Migrations
