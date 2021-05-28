@@ -13,9 +13,11 @@
             </p>
         </div>
         <div class="mdl-card__actions mdl-card--border">
-            <button wire:click="getCodeName" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" wire:loading.attr="disabled" style="min-width: 167.875px;">
-                <span>Generate Another</span>
-            </button>
+            <form wire:submit.prevent="getCodeName">
+                <button wire:click="getCodeName" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" wire:loading.attr="disabled" style="min-width: 167.875px;">
+                    <span>Generate Another</span>
+                </button>
+            </form>
         </div>
     </div>
 </div>
