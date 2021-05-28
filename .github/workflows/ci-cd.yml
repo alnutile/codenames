@@ -82,6 +82,9 @@ jobs:
           sudo cp .env.github .env
 
       - name: Test with phpunit
-        run: vendor/bin/phpunit --coverage-text
+        run: XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text --coverage-clover clover.xml
         env:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
+
+      - name: Do we pass the coverage amount
+        run: vendor/bin/coverage-check clover.xml 60

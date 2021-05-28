@@ -22,6 +22,7 @@
         "nunomaduro/collision": "^5.0",
         "nunomaduro/larastan": "^0.7.6",
         "phpunit/phpunit": "^9.3.3",
+        "rregeer/phpunit-coverage-check": "^0.3.1",
         "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
@@ -48,7 +49,9 @@
             "@php artisan key:generate --ansi"
         ],
         "fix": "vendor/bin/phpcbf --standard=PSR12 app",
-        "stan": "vendor/bin/phpstan analyse"
+        "stan": "vendor/bin/phpstan analyse",
+        "test": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text --coverage-clover clover.xml",
+        "coverage-check": "vendor/bin/coverage-check clover.xml 60"
     },
     "extra": {
         "laravel": {
