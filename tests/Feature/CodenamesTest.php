@@ -8,6 +8,7 @@ use Tests\TestCase;
 
 class CodenamesTest extends TestCase
 {
+    use RefreshDatabase;
 
     public function testMainRoute()
     {
