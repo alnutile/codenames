@@ -2,8 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use Facades\App\Clients\RandomWords;
-use Illuminate\Support\Str;
+use App\Clients\GeneratorFacade;
 use Livewire\Component;
 
 class ShowCodename extends Component
@@ -26,6 +25,6 @@ class ShowCodename extends Component
 
     public function getCodeName()
     {
-        return RandomWords::get();
+        return GeneratorFacade::get();
     }
 }

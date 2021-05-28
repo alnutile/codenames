@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 /**
  * Using https://random-data-api.com/documentation
  */
-class RandomWords
+class RandomWords implements CodenameGeneratorInterface
 {
 
     protected $base_url = "https://random-data-api.com/api";
