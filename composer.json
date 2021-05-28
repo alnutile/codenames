@@ -21,6 +21,7 @@
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
         "nunomaduro/larastan": "^0.7.6",
+        "phpmd/phpmd": "^2.10",
         "phpunit/phpunit": "^9.3.3",
         "rregeer/phpunit-coverage-check": "^0.3.1",
         "squizlabs/php_codesniffer": "*"
@@ -51,7 +52,8 @@
         "fix": "vendor/bin/phpcbf --standard=PSR12 app",
         "stan": "vendor/bin/phpstan analyse",
         "test": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text --coverage-clover clover.xml",
-        "coverage-check": "vendor/bin/coverage-check clover.xml 60"
+        "coverage-check": "vendor/bin/coverage-check clover.xml 60",
+        "phpmd": "vendor/bin/phpmd app text phpmd.ruleset.xml"
     },
     "extra": {
         "laravel": {
